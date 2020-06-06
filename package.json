@@ -1,0 +1,24 @@
+{
+  "name": "hng",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": " --maxWorkers=2 --ci --coverage --reporters=default --reporters=jest-junit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/otitoju/HNG.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/otitoju/HNG/issues"
+  },
+  "homepage": "https://github.com/otitoju/HNG#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.18"
+  }
+}
