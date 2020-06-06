@@ -15,11 +15,11 @@ jobs:
       - run:
           name: Run Test
           command: node server/app.js
-      - store_results:
+      - store_script_results:
           path: results
       - store_artifacts:
           path: results
 workflows:
-  build_tests:
+  build_script:
     jobs:
       - run_scripts
