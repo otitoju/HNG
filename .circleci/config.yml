@@ -2,9 +2,24 @@ orbs:
   node: circleci/node@2.0.2
 
 version: 2.1
-
+jobs:
+  run_scripts:
+    docker:
+      - image: circleci/node:10
+    steps:
+      - checkout
+      - run:
+          name: Install npm dependencies
+          command:
+            npm install --save
+      - run:
+          name: Run Test
+          command: node server/app.js
+      - store_results:
+          path: results
+      - store_artifacts:
+          path: results
 workflows:
-  matrix-tests:
+  build_tests:
     jobs:
-      - node/test:
-          version: 12.16.2
+      - run_scripts
